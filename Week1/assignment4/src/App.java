@@ -1,26 +1,28 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
         int[] arr = {1, 2, 3, -6, 5, 4, 0};
         ArrayList<Integer> ans = new ArrayList<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int sum = 0;
         boolean found = false;
 
+        map.put(0, -1);
+        
         for (int i = 0; i < arr.length; i++) {
-            int sum = 0;
-            for (int j = i + 1; j < arr.length; j++) {
-                for (int k = i; k < j; k++) {
-                    sum += arr[k];
-                }
+            sum += arr[i];
 
-                if (sum == 0) {
-                    ans.add(i);
-                    ans.add(j - 1);
-                    found = true;
-                    break;
-                }
-                sum = 0;
+            if (map.containsKey(sum)) {
+                int start = map.get(sum) + 1;
+                int end = i;
+                ans.add(start);
+                ans.add(end);
+                found = true;
+                break;
             }
+
+            map.put(sum, i);
 
             if(found) {
                 break;
