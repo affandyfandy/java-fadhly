@@ -1,8 +1,8 @@
-# Implement thread-safe Singleton
+# Implement Thread-Safe Singleton
 
 Singleton is design pattern in programming to ensure a class that one instance and provides global point to access the instance. Thread-safe is a piece of code that functions correctly when multiple threads access it simultaneously. So thread-safe singleton is multiple threads try to access the instance simultaneously, but only one instance is created and used.
 
-## Three ways to achive thread safety for singleton
+## Three Ways to Achive Thread Safety for Singleton
 
 1. `Create the instance variable at the time of class loading.`
 2. `Synchronize the getInstance() method.`
