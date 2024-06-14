@@ -8,7 +8,7 @@ Singleton is design pattern in programming to ensure a class that one instance a
 2. `Synchronize the getInstance() method.`
 3. `Use synchronized block inside the if loop and volatile variable.`
 
-But there were some pros and cons to using that tree ways:
+But there were some pros and cons to using that three ways:
 
 | Pros | Cons |
 |-|-|
