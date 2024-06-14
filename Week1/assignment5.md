@@ -12,11 +12,9 @@ But there were some pros and cons to using that tree ways:
 
 | Pros | Cons |
 |-|-|
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Thread safety is guaranteed | Early creation of resource that might not be used in the application |
+| Client application can pass arguments | Slow performance because of locking overhead |
+| Synchronization overhead is minimal and applicable only for first few threads when the variable is null | Unnecessary synchronization that is not required once the instance variable is initialized |
 
 ## Example Code
 
