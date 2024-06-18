@@ -1,7 +1,10 @@
 # Interface and Abstract Class
 
 ## Assignment 2.1 (What if implement 2 Interface that have same default method?)
-We can't implement 2 interface that have same default method. However we can implement default method in other 2 ways:
+We can't create class that have the same default method from 2 different interfaces. However we can implement default method in other 2 ways:
+
+![Error implement log default method](img/error%20log.png)
+
 1. `Create new method that will override all of the default method before.`
 
 ```java
@@ -46,6 +49,8 @@ public class Main {
     }
 }
 ```
+
+![Error implement log default method](img/success%20log%201.png)
 
 2. `Override the default method using either super form firstMethod or secondMethod`
 
@@ -99,6 +104,8 @@ public class Main {
     }
 }
 ```
+
+![Error implement log default method](img/success%20log%202.png)
 
 ## Assignment 2.2 (Difference Between Abstract Class and Interface)
 
@@ -233,3 +240,7 @@ public class Main {
 }
 
 ```
+
+## Assignment 2.4 (Implement Code Interface Class)
+
+`The code can be run from the src source from this folder.`
