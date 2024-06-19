@@ -135,8 +135,14 @@ This code bellow will be inisiated first the throws in the signature of the meth
 | Can't declare multiple exception | Can declare multiple exception |
 | Used within a method to actually throw an exception | Used in a method signature to declare that the method can throw certain exceptions |
 
-## Assignment 3.3 ()
+## Assignment 3.3 (Lab1)
 
-## Assignment 3.4 ()
+`The code can be run from the src source from this folder.`
 
-## Assignment 3.5 ()
+## Assignment 3.4 (Lab2)
+
+`The code can be run from the src source from this folder.`
+
+## Assignment 3.5 (Lab3)
+
+`The code can be run from the src source from this folder.`
