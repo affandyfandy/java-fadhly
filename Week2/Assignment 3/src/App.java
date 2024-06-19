@@ -1,5 +1,9 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+
         //Lab 1 if Correct input
         Lab1 File1 = new Lab1("test1.txt");
         File1.readWriteFile("test2.txt");
@@ -11,11 +15,13 @@ public class App {
 
         //Lab 2
         Lab2 menu1 = new Lab2();
-        menu1.pickMenu();
+        menu1.pickMenu(scanner);
         System.out.println();
 
         //Lab3
         Lab3 vowel1 = new Lab3();
-        vowel1.checkVowels();
+        vowel1.checkVowels(scanner);
+
+        scanner.close();
     }
 }

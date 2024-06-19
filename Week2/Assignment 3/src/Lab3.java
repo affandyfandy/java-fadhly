@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Lab3 {
-    public void checkVowels() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Sentence: ");
+    public void checkVowels(Scanner scanner) {
+        scanner.nextLine();
+        System.out.print("Enter Sentence: ");
         String sentence = scanner.nextLine();
 
         try {
@@ -14,9 +14,6 @@ public class Lab3 {
             }
         } catch(Lab3Exception e) {
             System.out.println("Lab3Exception caught: " + e.getMessage());
-        } finally {
-            scanner.close();
         }
-
     }
 }

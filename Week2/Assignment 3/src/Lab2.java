@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Lab2 {
-    public void pickMenu() {
-        Scanner scanner = new Scanner(System.in);
+    public void pickMenu(Scanner scanner) {
         String[] menu = {"Chicken", "Beef", "Pasta", "Salad", "Curry"};
 
         System.out.println("List Menu");
@@ -21,8 +20,6 @@ public class Lab2 {
             System.out.println(e.getMessage());
         } catch (Exception e) {
             System.out.println("An unexpected error occurred: " + e.getMessage());
-        } finally {
-            scanner.close();
         }
     }
 }
