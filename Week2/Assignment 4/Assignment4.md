@@ -126,6 +126,13 @@ After using `Multiple Threads` in the task before, I found some advantages and d
 
 ## Assignment 4.5 (ReadWriteLock interface for concurrent read-write access to a shared resource)
 
+`ReadWriteLock Interface` is resource that provide a pair of locks for controlling access to a shared resource like `read-only operations` and `write operations`. It allows multiple thread to read the resource simultaneously.
+
+1. `Read Lock` is a function that will allows threads to read simultaneously and if there is a thread read lock, no thread can write lock.
+2. `Write Lock` is a function that will allows only one thread to write the resource and if there is a thread write lock, no thread can write and read lock.
+
+### Example Code for ReadWriteLock
+
 `The code can be run from the src source from this folder.`
 
 ![Deadlock Prevented](img/Shared%20Resource.png)
