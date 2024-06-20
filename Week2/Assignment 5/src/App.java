@@ -11,22 +11,22 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         //Assignment 5.2 Retrive an element
-        // ArrayList<Integer> arrElement = new ArrayList<>();
-        // arrElement.add(5);
-        // arrElement.add(4);
-        // arrElement.add(1);
-        // arrElement.add(3);
-        // arrElement.add(2);
+        ArrayList<Integer> arrElement = new ArrayList<>();
+        arrElement.add(5);
+        arrElement.add(4);
+        arrElement.add(1);
+        arrElement.add(3);
+        arrElement.add(2);
 
-        // // Lab5_2 numElement = new Lab5_2(arrElement);
-        // System.out.print("Insert Index of Element: ");
-        // int index = scanner.nextInt();
-        // System.out.println(arrElement);
-        // numElement.checkElement(index);
+        Lab5_2 numElement = new Lab5_2(arrElement);
+        System.out.print("Insert Index of Element: ");
+        int index = scanner.nextInt();
+        System.out.println(arrElement);
+        numElement.checkElement(index);
 
         //Assignment 5.3 Remove Duplicate
-        // Lab5_3 uniqueElm = new Lab5_3("ImportData.csv");
-        // uniqueElm.removeDuplicate("OutputData.csv", "Department");
+        Lab5_3 uniqueElm = new Lab5_3("ImportData.csv");
+        uniqueElm.removeDuplicate("OutputData.csv", "Department");
 
         //Assignment 5.4 Convert List to Map
         List<Lab5_5> employees = List.of(
