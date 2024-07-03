@@ -2,6 +2,7 @@ package example.lecture7.assignment1;
 
 import example.lecture7.assignment1.model.Employee;
 import example.lecture7.assignment1.model.Employee2;
+import example.lecture7.assignment1.model.Employee3;
 import example.lecture7.assignment1.config.AppConfig;
 
 import org.springframework.boot.SpringApplication;
@@ -17,12 +18,16 @@ public class Assignment1Application {
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		//Assignment 01 - Task 2
-		// Employee employee = context.getBean(Employee.class);
-		// employee.working();
+		//Assignment 01 - Task 2 - Constructor Injection
+		Employee employee = context.getBean(Employee.class);
+		employee.working();
 
-		//Assignment 01 - Task 3
+		//Assignment 01 - Task 3 - Field Injection
 		Employee2 employee2 = context.getBean(Employee2.class);
 		employee2.working();
+
+		//Assignment 01 - Task 3 - Setter Injection
+		Employee3 employee3 = context.getBean(Employee3.class);
+		employee3.working();
 	}
 }

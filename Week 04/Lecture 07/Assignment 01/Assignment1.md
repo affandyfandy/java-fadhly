@@ -31,11 +31,15 @@ So `Dependency Injection` in Object Oriented Programming (OOP) is a design patte
 
 ### Declace Config AppConfig
 
-![Config AppConfig Task 2](img/Create%20Config%20AppConfig.PNG)
+![Config AppConfig Task 2](img/Create%20Config%20AppConfig%201.PNG)
+
+![Config AppConfig Task 2](img/Create%20Config%20AppConfig%202.PNG)
 
 ### Main Application
 
-![Running Appication Task 2](img/Running%20Application%20Constructor%20DI.PNG)
+![Main Function](img/Create%20Main%20Application.PNG)
+
+![Running Appication Task 2](img/Running%20Application%20Constructor,%20Setter,%20Field%20Injection.PNG)
 
 ## Task 3: Configuration Setter and Field Injection using @Bean
 
@@ -43,14 +47,22 @@ So `Dependency Injection` in Object Oriented Programming (OOP) is a design patte
 
 ![Controller EmployeeWork](img/Create%20Controller%20EmployeeWork.PNG)
 
-### Declare Model Employee
+### Declare Model Employee for Field Injection
 
 ![Model Employee Task 3](img/Create%20Model%20Employee%202.PNG)
 
+### Declare Model Employee for Setter Injection
+
+![Model Employee Task 3](img/Create%20Model%20Employee%203.PNG)
+
 ### Declace Config AppConfig
 
-![Config AppConfig Task 3](img/Create%20Config%20AppConfig.PNG)
+![Config AppConfig Task 3](img/Create%20Config%20AppConfig%201.PNG)
+
+![Config AppConfig Task 3](img/Create%20Config%20AppConfig%202.PNG)
 
 ### Main Application
 
-![Running Appication Task 3](img/Running%20Application%20Setter%20and%20Field%20DI.PNG)
+![Main Function](img/Create%20Main%20Application.PNG)
+
+![Running Appication Task 3](img/Running%20Application%20Constructor,%20Setter,%20Field%20Injection.PNG)

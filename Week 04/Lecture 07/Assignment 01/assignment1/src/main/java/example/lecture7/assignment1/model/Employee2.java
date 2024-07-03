@@ -18,7 +18,7 @@ public class Employee2 {
     }
 
     public void working() {
-        System.out.println("My name is: " + name);
+        System.out.println("My name is: " + name + " - Using Field Injection");
         employeeWork.work();
     }
 }
