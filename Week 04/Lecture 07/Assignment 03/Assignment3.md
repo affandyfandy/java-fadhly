@@ -78,13 +78,21 @@
 
 ![Service EmailService Interface](img/EmailService%20Interface.PNG)
 
-### Create Service EmailServiceImpl2 Class
+### Create Service EmailServiceImpl Class
 
-![EmailServiceImplementation using @RequestScope](img/EmailServiceImplementation%20with%20RequestScope.PNG)
+![EmailServiceImplementation using @Scope("prototype")](img/EmailServiceImplementation%20with%20Scope.PNG)
 
-### Create Service EmployeeService4 class
+### Create Service EmployeeService class
 
-![Service EmployeeService using Constructor Injection and @RequestScope](img/EmailServiceImplementation%20with%20RequestScope.PNG)
+![Service EmployeeService using Constructor Injection and @Scope("singleton")](img/EmployeeService%20with%20Constructor%20Injection%20use%20Scope.PNG)
+
+### Create Service EmployeeService2 class
+
+![Service EmployeeService using Field Injection and @Scope("singleton")](img/EmployeeService%20with%20Field%20Injection%20use%20Scope.PNG)
+
+### Create Service EmployeeService3 class
+
+![![Service EmployeeService using Setter Injection and @Scope("singleton")]](img/EmployeeService%20with%20Setter%20Injection%20use%20Scope.PNG)
 
 ### Main Application and Running
 
