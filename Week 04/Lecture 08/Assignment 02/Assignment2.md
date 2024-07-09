@@ -39,6 +39,10 @@ Create using Spring Boot Project, using JDBC Template to Query SQL.
 
 ![Setting Database to Connect with Spring Boot Project](img/Setting%20Database.PNG)
 
+### Create Config MapperConfig Class
+
+![Create Config MapperConfig](img/Config%20MapperConfig.PNG)
+
 ### Create Controller EmployeeController Class
 
 ![Create Controller EmployeeController](img/Controller%20EmployeeController%201.PNG)
@@ -57,11 +61,17 @@ Create using Spring Boot Project, using JDBC Template to Query SQL.
 
 ![Create Repository EmployeeRepository](img/Repository%20EmployeeRepository%202.PNG)
 
+### Create Repository EmployeeRowMapper Class
+
+![Create Repository EmployeeRowMapper](img/Repository%20EmployeeRowMapper.PNG)
+
 ### Create Service EmployeeService Class
 
 ![Create Service EmployeeService](img/Service%20EmployeeService%201.PNG)
 
 ![Create Service EmployeeService](img/Service%20EmployeeService%202.PNG)
+
+![Create Service EmployeeService](img/Service%20EmployeeService%203.PNG)
 
 ### Main Application
 

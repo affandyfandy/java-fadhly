@@ -37,18 +37,28 @@ public class EmployeeController {
     }
 
     @GetMapping("/ds1/getEmployee/{id}")
-    public Employee findEmployeeById1(@PathVariable int id) {
+    public String findEmployeeById1(@PathVariable int id) {
         return employeeService.findEmployeeById1(id);
     }
 
     @GetMapping("/ds2/getEmployee/{id}")
-    public Employee findEmployeeById2(@PathVariable int id) {
+    public String findEmployeeById2(@PathVariable int id) {
         return employeeService.findEmployeeById2(id);
     }
 
     @PostMapping("/ds1/add")
     public String createEmployee1(@RequestBody Employee employee) {
         return employeeService.createEmployee1(employee);
+    }
+
+    @PostMapping("/ds1/testTransaction")
+    public String createEmployeeTestTransaction(@RequestBody Employee emp1) {
+        try {
+            employeeService.createEmployeeTestTransaction(emp1, null);
+            return "Success Insert Data";
+        } catch(Exception e) {
+            return "Failed Insert Data " + e.getMessage();
+        }
     }
 
     @PostMapping("/ds2/add")

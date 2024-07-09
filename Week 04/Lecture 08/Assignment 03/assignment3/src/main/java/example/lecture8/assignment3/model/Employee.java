@@ -8,4 +8,8 @@ public class Employee {
     private String name;
     private String department;
     private int age;
+
+    public String show() {
+        return "Id: " + id + "\nName: " + name + "\nDepartment: " + department + "\nAge: " + age;
+    }
 }

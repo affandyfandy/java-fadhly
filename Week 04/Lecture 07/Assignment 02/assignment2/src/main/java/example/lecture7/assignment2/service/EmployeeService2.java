@@ -10,7 +10,6 @@ public class EmployeeService2 {
     private EmailService emailService;
 
     public void sending(String email, String message) {
-        System.out.println("Using Field Injection");
         emailService.sendEmail(email, message);
     }
 }

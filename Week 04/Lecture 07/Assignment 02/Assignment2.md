@@ -8,7 +8,6 @@
 2. `@Service`
 3. `@Autowired`
 4. `@Configuration`
-5. `@ComponentScan`
 
 ### Create Config AppConfig
 
@@ -101,6 +100,9 @@
 | **Circular Dependency Handling** | Poor | Medium | Medium |
 | **Thread Safety** | High | Low | Low |
 
+### Which one is better?
+
+In my opinion and from the research before, i think `Setter Injection` is more better than other `Constructor Injection` or `Field Injection`. It just like `Constructor Injection` but it more flexible because it can be changed after object creation. Also `Setter Injection` is better to handling Circular Dependency because of the flexibility, partial initialized, and easy to manage.
 
 ## Task 03: [Optional] Research Circular dependency injection
 

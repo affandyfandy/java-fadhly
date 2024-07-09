@@ -38,9 +38,17 @@ when using using multiple datasource, using bean is a useful approach.
 
 Connect to database using Bean Annotation, without application properties. Also define `Transactional` and `JDBCTemplate` for each database.
 
-![Connect Database](img/Connect%20Database%201.PNG)
+![Connect Database](img/Application%20Properties%20Database.PNG)
 
 ![Connect Database](img/Connect%20Database%201.PNG)
+
+![Connect Database](img/Connect%20Database%202.PNG)
+
+![Connect Database](img/Connect%20Database%203.PNG)
+
+### Create Config MapperConfig
+
+![Call EmployeeRowMapper](img/Config%20MapperConfig.PNG)
 
 ### Create Model Employee
 
@@ -56,11 +64,19 @@ Model creted using `Lombok` Dependency.
 
 ![Create Repository Database 1](img/Create%20Repository%20Database1%202.PNG)
 
+![Create Repository Database 1](img/Create%20Repository%20Database1%203.PNG)
+
 2. `Repository Database 2`
 
 ![Create Repository Database 2](img/Create%20Repository%20Database2%201.PNG)
 
 ![Create Repository Database 2](img/Create%20Repository%20Database2%202.PNG)
+
+![Create Repository Database 2](img/Create%20Repository%20Database2%203.PNG)
+
+### Create Repository EmployeeRowMapper
+
+![Create EmployeeRowMapper](img/Create%20Repository%20EmployeeRowMapper.PNG)
 
 ### Create ServiceEmployee
 
@@ -112,13 +128,9 @@ Main appication additional `exclude = { DataSourceAutoConfiguration.class }` fro
 
 ![Test Get by Param](img/Test%20API%20GET%20Find%20Employee%20by%20ID%20Database1%201.PNG)
 
-![Test Get by Param](img/Test%20API%20GET%20Find%20Employee%20by%20ID%20Database1%202.PNG)
-
 `Database 2`
 
 ![Test Get by Param](img/Test%20API%20GET%20Find%20Employee%20by%20ID%20Database2%201.PNG)
-
-![Test Get by Param](img/Test%20API%20GET%20Find%20Employee%20by%20ID%20Database2%202.PNG)
 
 3. `POST`
 
@@ -181,6 +193,38 @@ Handle when Insert and Upadate data using `Transactional` Annotation. `Transcati
 ![Transactional in Service](img/Create%20Service%205.PNG)
 
 It will handle when the API calling for POST/PUT/DELETE.
+
+### Example if Transactional Active
+
+1. `Use 2 table in the same datasource`
+
+![Second table](img/Create%20Second%20Table%20Employee.PNG)
+
+2. `Service` and `Repository`
+
+![Repository Transactional Testing](img/Repository%20for%20Testing%20Transactional.PNG)
+
+![Service Transactional Testing](img/Service%20for%20Testing%20Transactional.PNG)
+
+3. `Create scheme that success inserted`
+
+![Sceme Success to Create Employee](img/Sceme%20if%20Successed%201.PNG)
+
+![Sceme Success to Create Employee](img/Sceme%20if%20Successed%202.PNG)
+
+![Sceme Success to Create Employee](img/Sceme%20if%20Successed%203.PNG)
+
+![Sceme Success to Create Employee](img/Sceme%20if%20Successed%204.PNG)
+
+4. `Create scheme that fail inserted`
+
+![Sceme Fail to Create Employee](img/Sceme%20if%20Failed%201.PNG)
+
+![Sceme Fail to Create Employee](img/Sceme%20if%20Failed%202.PNG)
+
+![Sceme Fail to Create Employee](img/Sceme%20if%20Failed%203.PNG)
+
+![Sceme Fail to Create Employee](img/Sceme%20if%20Failed%204.PNG)
 
 ## Task 03: Research Lombok and Create Project using It
 

@@ -13,7 +13,6 @@ public class EmployeeService3 {
     }
 
     public void sending(String email, String message) {
-        System.out.println("Using Setter Injection");
         emailService.sendEmail(email, message);
     }
 }
