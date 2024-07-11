@@ -1,0 +1,127 @@
+package example.lecture9.assignment3.controller;
+
+import lombok.AllArgsConstructor;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import example.lecture9.assignment3.model.Employee;
+import example.lecture9.assignment3.service.EmployeeService;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.time.LocalDate;
+import java.util.List;
+
+@AllArgsConstructor
+@Controller
+@RequestMapping("/employees")
+public class EmployeeController {
+    private final EmployeeService employeeService;
+
+    @GetMapping("/list")
+    public String listEmployees(Model theModel) {
+
+        // get the employees from db
+        List<Employee> theEmployees = employeeService.findAll();
+
+        // add to the spring model
+        theModel.addAttribute("employees", theEmployees);
+
+        return "employees/list-employees";
+    }
+
+    @GetMapping("/showFormForUploadCSV")
+    public String pageCsv(Model theModel) {
+        return "employees/csv-form";
+    }
+
+    @GetMapping("/showFormForAdd")
+    public String showFormForAdd(Model theModel) {
+
+        // create model attribute to bind form data
+        Employee theEmployee = new Employee();
+
+        theModel.addAttribute("employee", theEmployee);
+
+        return "employees/employee-form";
+    }
+
+    @GetMapping("/generate-pdf")
+    public void generatePdf(HttpServletResponse response, Model model) {
+        Employee highestSalaryEmployee = employeeService.highestSalaryEmployee();
+        Employee lowestSalaryEmployee = employeeService.lowestSalaryEmployee();
+        
+        model.addAttribute("highestSalaryEmployee", highestSalaryEmployee != null ? highestSalaryEmployee.getName() : "N/A");
+        model.addAttribute("maxSalary", highestSalaryEmployee != null ? highestSalaryEmployee.getSalary() : 0);
+        model.addAttribute("lowestSalaryEmployee", lowestSalaryEmployee != null ? lowestSalaryEmployee.getName() : "N/A");
+        model.addAttribute("minSalary", lowestSalaryEmployee != null ? lowestSalaryEmployee.getSalary() : 0);
+        model.addAttribute("averageSalary", employeeService.averageSalary());
+        model.addAttribute("totalRecords", employeeService.totalRecords());
+        model.addAttribute("employees", employeeService.findAll());
+        model.addAttribute("date", LocalDate.now());
+
+        String htmlContent = employeeService.renderTemplateToString("employees/pdf-template", model);
+        employeeService.generatePdfFromHtml(response, htmlContent);
+    }
+
+    @GetMapping("/show-report")
+    public String showReport(Model model) {
+        Employee highestSalaryEmployee = employeeService.highestSalaryEmployee();
+        Employee lowestSalaryEmployee = employeeService.lowestSalaryEmployee();
+        
+        model.addAttribute("highestSalaryEmployee", highestSalaryEmployee != null ? highestSalaryEmployee.getName() : "N/A");
+        model.addAttribute("maxSalary", highestSalaryEmployee != null ? highestSalaryEmployee.getSalary() : 0);
+        model.addAttribute("lowestSalaryEmployee", lowestSalaryEmployee != null ? lowestSalaryEmployee.getName() : "N/A");
+        model.addAttribute("minSalary", lowestSalaryEmployee != null ? lowestSalaryEmployee.getSalary() : 0);
+        model.addAttribute("averageSalary", employeeService.averageSalary());
+        model.addAttribute("totalRecords", employeeService.totalRecords());
+        model.addAttribute("employees", employeeService.findAll());
+        model.addAttribute("date", LocalDate.now());
+
+        return "employees/pdf-template";
+    }
+
+    @PostMapping("/showFormForUpdate")
+    public String showFormForUpdate(@RequestParam("employeeId") String id,
+                                    Model theModel) {
+
+        // get the employee from the service
+        Employee theEmployee = employeeService.findById(id);
+
+        // set employee as a model attribute to pre-populate the form
+        theModel.addAttribute("employee", theEmployee);
+
+        // send over to our form
+        return "employees/employee-form";
+    }
+
+    @PostMapping("/save")
+    public String saveEmployee(@ModelAttribute("employee") Employee theEmployee) {
+
+        // save the employee
+        employeeService.save(theEmployee);
+
+        // use a redirect to prevent duplicate submissions
+        return "redirect:/employees/list";
+    }
+
+    @PostMapping("/saveCSV")
+    public String saveFileCsv(@RequestParam("file") MultipartFile file, Model theModel) {
+        employeeService.saveCSV(file);
+
+        return "redirect:/employees/list";
+    }
+
+    @PostMapping("/delete")
+    public String delete(@RequestParam("employeeId") String id) {
+
+        // delete the employee
+        employeeService.deleteById(id);
+
+        // redirect to /employees/list
+        return "redirect:/employees/list";
+
+    }
+}
