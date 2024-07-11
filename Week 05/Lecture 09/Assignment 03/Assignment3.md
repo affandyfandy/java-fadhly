@@ -4,7 +4,7 @@
 
 ### Select Dependencies
 
-[Dependencies File](assignment3\pom.xml)
+[Dependencies File](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/pom.xml)
 
 1. `Spring Boot Starter JPA`
 2. `MySQL Database`
@@ -16,9 +16,9 @@
 
 ### Create Database
 
-[Query Create Table](table.sql) For create Table Employee
+[Query Create Table](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/table.sql) For create Table Employee
 
-[Properties File in Project](assignment3\src\main\resources\application.properties) For connect database to project using MySQL
+[Properties File in Project](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/resources/application.properties) For connect database to project using MySQL
 
 1. `Create Table Employee`
 
@@ -32,33 +32,33 @@
 
 ### Create Model
 
-[Model Employee](assignment3\src\main\java\example\lecture9\assignment3\model\Employee.java) Create Model Employee using `Lombok` Dependency
+[Model Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/java/example/lecture9/assignment3/model/Employee.java) Create Model Employee using `Lombok` Dependency
 
 ### Create Repository
 
-[Repository EmployeeRepository](assignment3\src\main\java\example\lecture9\assignment3\repository\EmployeeRepository.java) Create Repository Interface for Employee using `JPA` Dependencies
+[Repository EmployeeRepository](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/java/example/lecture9/assignment3/repository/EmployeeRepository.java) Create Repository Interface for Employee using `JPA` Dependencies
 
 ### Create Service
 
-[Service EmployeeService](assignment3\src\main\java\example\lecture9\assignment3\service\EmployeeService.java) Create Service Interface for Service Implementation and Handling Open CSV File, Generate HTML File to PDF
+[Service EmployeeService](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/java/example/lecture9/assignment3/service/EmployeeService.java) Create Service Interface for Service Implementation and Handling Open CSV File, Generate HTML File to PDF
 
-[Service EmployeeServiceImpl](assignment3\src\main\java\example\lecture9\assignment3\service\impl\EmployeeServiceImpl.java) Create Service Implementation that Implement Method from EmployeeService and the Body Calling from Repository
+[Service EmployeeServiceImpl](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/java/example/lecture9/assignment3/service/Impl/EmployeeServiceImpl.java) Create Service Implementation that Implement Method from EmployeeService and the Body Calling from Repository
 
 ### Create Controller
 
-[Controller EmployeeController](assignment3\src\main\java\example\lecture9\assignment3\controller\EmployeeController.java) Create Controller for Employee that Contain End-Point and RESTApi for Simple CRUD, Read CSV File, and Generate HTML File to PDF
+[Controller EmployeeController](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/java/example/lecture9/assignment3/controller/EmployeeController.java) Create Controller for Employee that Contain End-Point and RESTApi for Simple CRUD, Read CSV File, and Generate HTML File to PDF
 
 ### Create View
 
-[View Index](assignment3\src\main\resources\static\index.html) Create Index Static HTML for the Welcome Page of the Project
+[View Index](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/resources/static/index.html) Create Index Static HTML for the Welcome Page of the Project
 
-[View List Employee](assignment3\src\main\resources\templates\employees\list-employees.html) Create View for Page that Contain All of the List Employee that Store in Database
+[View List Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/resources/templates/employees/list-employees.html) Create View for Page that Contain All of the List Employee that Store in Database
 
-[View Form Employee](assignment3\src\main\resources\templates\employees\employee-form.html) Create View for Form Employee like Create New Employee or Edit Employee
+[View Form Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/resources/templates/employees/employee-form.html) Create View for Form Employee like Create New Employee or Edit Employee
 
-[View Form Upload CSV](assignment3\src\main\resources\templates\employees\csv-form.html) Create View for Form Upload File CSV and Store it to Database
+[View Form Upload CSV](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/resources/templates/employees/csv-form.html) Create View for Form Upload File CSV and Store it to Database
 
-[View Report Employee](assignment3\src\main\resources\templates\employees\pdf-template.html) Create View for Generate HTML Report Employee to PDF File
+[View Report Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2003/assignment3/src/main/resources/templates/employees/pdf-template.html) Create View for Generate HTML Report Employee to PDF File
 
 ### Running Application
 

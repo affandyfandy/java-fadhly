@@ -4,7 +4,7 @@
 
 ### Select Dependencies
 
-[Dependencies File](assignment2\pom.xml)
+[Dependencies File](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/pom.xml)
 
 1. `Spring Boot Starter JPA`
 2. `MySQL Database`
@@ -16,9 +16,9 @@
 
 ### Create Database
 
-[Query Table](table.sql) Creating Table Employee
+[Query Table](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/table.sql) Creating Table Employee
 
-[Database Setting](assignment2\src\main\resources\application.properties) Connect Database to Project
+[Database Setting](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/resources/application.properties) Connect Database to Project
 
 1. `Create Table Employee`
 
@@ -32,31 +32,31 @@
 
 ### Create Model
 
-[Model Employee](assignment2\src\main\java\example\lecture9\assignment2\model\Employee.java) Create Model Employee using `Lombok` Dependency
+[Model Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/java/example/lecture9/assignment2/model/Employee.java) Create Model Employee using `Lombok` Dependency
 
 ### Create Repository
 
-[Repository EmployeeRepository](assignment2\src\main\java\example\lecture9\assignment2\repository\EmployeeRepository.java) Create Repository Interface for Employee using `JPA` Dependencies
+[Repository EmployeeRepository](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/java/example/lecture9/assignment2/repository/EmployeeRepository.java) Create Repository Interface for Employee using `JPA` Dependencies
 
 ### Create Service
 
-[Service EmployeeService](assignment2\src\main\java\example\lecture9\assignment2\service\EmployeeService.java) Create Service Interface for Service Implementation
+[Service EmployeeService](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/java/example/lecture9/assignment2/service/EmployeeService.java) Create Service Interface for Service Implementation
 
-[Service EmployeeServiceImpl](assignment2\src\main\java\example\lecture9\assignment2\service\impl\EmployeeServiceImpl.java) Create Service Implementation that Implement Method from EmployeeService and the Body Calling from Repository
+[Service EmployeeServiceImpl](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/java/example/lecture9/assignment2/service/Impl/EmployeeServiceImpl.java) Create Service Implementation that Implement Method from EmployeeService and the Body Calling from Repository
 
 ### Create Controller
 
-[Controller EmployeeController](assignment2\src\main\java\example\lecture9\assignment2\controller\EmployeeController.java) Create Controller for Employee that Contain End-Point and RESTApi
+[Controller EmployeeController](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/java/example/lecture9/assignment2/controller/EmployeeController.java) Create Controller for Employee that Contain End-Point and RESTApi
 
 ### Create View
 
-[View Index](assignment2\src\main\resources\static\index.html) Create Index Static HTML for the Welcome Page of the Project
+[View Index](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/resources/static/index.html) Create Index Static HTML for the Welcome Page of the Project
 
-[View List Employee](assignment2\src\main\resources\templates\employees\list-employees.html) Create View for Page that Contain All of the List Employee that Store in Database
+[View List Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/resources/templates/employees/list-employees.html) Create View for Page that Contain All of the List Employee that Store in Database
 
-[View Form Employee](assignment2\src\main\resources\templates\employees\employee-form.html) Create View for Form Employee like Create New Employee or Edit Employee
+[View Form Employee](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/resources/templates/employees/employee-form.html) Create View for Form Employee like Create New Employee or Edit Employee
 
-[View Form Upload CSV](assignment2\src\main\resources\templates\employees\csv-form.html) Create View for Form Upload File CSV and Store it to Database
+[View Form Upload CSV](https://github.com/affandyfandy/java-fadhly/blob/Week_05/Week%2005/Lecture%2009/Assignment%2002/assignment2/src/main/resources/templates/employees/csv-form.html) Create View for Form Upload File CSV and Store it to Database
 
 ### Running Application
 
