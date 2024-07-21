@@ -1,7 +1,8 @@
-package example.lecture11.assignment1.controller;
+package example.lecture12.assignment1.controller;
 
-import example.lecture11.assignment1.entity.Employee;
-import example.lecture11.assignment1.service.EmployeeService;
+import example.lecture12.assignment1.dto.EmployeeSearchCriteria;
+import example.lecture12.assignment1.entity.Employee;
+import example.lecture12.assignment1.service.EmployeeService;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
@@ -13,16 +14,32 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
 @RestController
-@RequestMapping("/api/v4/employee")
+@RequestMapping("/api/v5/employee")
 @AllArgsConstructor
 public class EmployeeController {
-
     private final EmployeeService employeeService;
 
     @GetMapping
     public ResponseEntity<Page<Employee>> getAllEmployees(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Employee> employeePage = employeeService.findAll(pageable);
+        if (employeePage.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(employeePage);
+    }
+
+    @GetMapping(value = "/search")
+    public ResponseEntity<Page<Employee>> searchEmployees(@RequestBody EmployeeSearchCriteria searchCriteria) {
+        Pageable pageable = PageRequest.of(searchCriteria.getPage(), searchCriteria.getSize());
+        Page<Employee> employeePage = employeeService.findByCriteria(
+                searchCriteria.getFirstName(), 
+                searchCriteria.getLastName(), 
+                searchCriteria.getGender(), 
+                searchCriteria.getHireDate(),
+                pageable
+        );
+
         if (employeePage.isEmpty()) {
             return ResponseEntity.noContent().build();
         }

@@ -1,8 +1,8 @@
-DROP DATABASE if EXISTS `assignment1lecture11`;
+DROP DATABASE if EXISTS `assignment1lecture12`;
 
-CREATE DATABASE `assignment1lecture11`;
+CREATE DATABASE `assignment1lecture12`;
 
-USE `assignment1lecture11`;
+USE `assignment1lecture12`;
 
 CREATE TABLE `employees` (
     `emp_no` int(11) NOT NULL AUTO_INCREMENT,
