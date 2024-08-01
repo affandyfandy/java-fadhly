@@ -18,8 +18,8 @@ public class ApiKeyServiceImpl implements ApiKeyService {
 
     @Transactional
     @Override
-    public Optional<ApiKey> validateAndUpdateApiKey(String apiKey) {
-        Optional<ApiKey> apiKeyOptional = apiKeyRepository.findByApiKey(apiKey);
+    public Optional<ApiKey> validateAndUpdateApiKey(String apiKey, String username) {
+        Optional<ApiKey> apiKeyOptional = apiKeyRepository.findByApiKeyAndUsername(apiKey, username);
         apiKeyOptional.ifPresent(key -> {
             key.setLastUsed(LocalDateTime.now());
             apiKeyRepository.save(key);

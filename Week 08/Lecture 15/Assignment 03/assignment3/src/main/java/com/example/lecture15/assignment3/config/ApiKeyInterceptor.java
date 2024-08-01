@@ -20,18 +20,19 @@ public class ApiKeyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String apiKey = request.getHeader("api-key");
+        String username = request.getHeader("use-name");
 
-        if (apiKey == null) {
+        if (apiKey == null || username == null) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.getWriter().write("Missing API Key");
+            response.getWriter().write("Missing API Key or Username");
             return false;
         }
 
-        Optional<ApiKey> apiKeyOptional = apiKeyService.validateAndUpdateApiKey(apiKey);
+        Optional<ApiKey> apiKeyOptional = apiKeyService.validateAndUpdateApiKey(apiKey, username);
 
         if (apiKeyOptional.isEmpty()) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.getWriter().write("Invalid API Key");
+            response.getWriter().write("Invalid API Key or Username");
             return false;
         }
 
