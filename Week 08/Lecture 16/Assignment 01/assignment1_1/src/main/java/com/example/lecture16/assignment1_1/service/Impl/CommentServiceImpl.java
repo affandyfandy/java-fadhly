@@ -4,6 +4,7 @@ import com.example.lecture16.assignment1_1.service.CommentService;
 import com.example.lecture16.assignment1_1.dto.CommentShowDTO;
 
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import org.springframework.stereotype.Service;
 import lombok.AllArgsConstructor;
@@ -13,6 +14,7 @@ import lombok.AllArgsConstructor;
 public class CommentServiceImpl implements CommentService {
 
     private final RestTemplate restTemplate;
+    private final WebClient.Builder webClientBuilder;
 
     @Override
     public CommentShowDTO getCommentByIdUsingRestTemplate(Long id) {
@@ -21,6 +23,11 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentShowDTO getCommentByIdUsingWebclient(Long id) {
-        return null;
+        WebClient webClient = webClientBuilder.baseUrl("http://localhost:8081/api/v1").build();
+        return webClient.get()
+                .uri("/comments/" + id)
+                .retrieve()
+                .bodyToMono(CommentShowDTO.class)
+                .block();
     }
 }

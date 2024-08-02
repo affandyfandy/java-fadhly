@@ -52,7 +52,15 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<PostShowDTO> getAllPostsUsingWebClient() {
-        return null;
+        List<Post> posts = postRepository.findAll();
+        return posts.stream()
+                .map(post -> {
+                    PostShowDTO postDTO = postMapper.toPostShowDTO(post);
+                    List<CommentShowDTO> comments = postMapper.mapCommentsUsingWebclient(post.getCommentId(), commentService);
+                    postDTO.setComments(comments);
+                    return postDTO;
+                })
+                .collect(Collectors.toList());
     }
 
     @Override

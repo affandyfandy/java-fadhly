@@ -24,7 +24,7 @@ public class PostController {
     @GetMapping(value = "/feign-client")
     public ResponseEntity<List<PostShowDTO>> getAllPostsUsingFeignClient() {
         List<PostShowDTO> posts = postService.getAllPostsUsingFeignClient();
-        if (posts.isEmpty()) {
+        if (posts == null) {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(posts);
@@ -33,7 +33,7 @@ public class PostController {
     @GetMapping(value = "/rest-template")
     public ResponseEntity<List<PostShowDTO>> getAllPostsUsingRestTemplate() {
         List<PostShowDTO> posts = postService.getAllPostsUsingRestTemplate();
-        if (posts.isEmpty()) {
+        if (posts == null) {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(posts);
@@ -42,7 +42,7 @@ public class PostController {
     @GetMapping(value = "/web-client")
     public ResponseEntity<List<PostShowDTO>> getAllPostsUsingWebClient() {
         List<PostShowDTO> posts = postService.getAllPostsUsingWebClient();
-        if (posts.isEmpty()) {
+        if (posts == null) {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(posts);
