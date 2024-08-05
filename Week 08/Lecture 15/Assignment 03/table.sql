@@ -1,0 +1,1 @@
+INSERT INTO `api_key` (`api_key`, `last_used`, `username`) VALUES ('testApiKey', '2024-08-05 07:42:25.000000', 'fadhly');
