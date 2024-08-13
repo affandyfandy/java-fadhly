@@ -42,8 +42,8 @@ public interface CustomerMapper {
     @Mapping(target = "invoice", ignore = true)
     Customer toCustomer(CustomerSaveDTO customerSaveDTO);
 
-    // Customer - CostumerInvoiceDTO
-    CustomerInvoiceDTO toCostumerInvoiceDTO(Customer customer);
+    // Customer - CustomerInvoiceDTO
+    CustomerInvoiceDTO toCustomerInvoiceDTO(Customer customer);
 
     @Mapping(target = "phoneNumber", ignore = true)
     @Mapping(target = "status", ignore = true)

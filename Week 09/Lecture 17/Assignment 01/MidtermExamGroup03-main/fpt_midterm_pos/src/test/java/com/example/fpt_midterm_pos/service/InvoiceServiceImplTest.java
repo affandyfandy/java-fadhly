@@ -1,13 +1,10 @@
 package com.example.fpt_midterm_pos.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,13 +13,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.ContextConfiguration;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.fpt_midterm_pos.data.model.Customer;
 import com.example.fpt_midterm_pos.data.model.Invoice;
@@ -37,8 +27,6 @@ import com.example.fpt_midterm_pos.dto.InvoiceSaveDTO;
 import com.example.fpt_midterm_pos.dto.InvoiceSearchCriteriaDTO;
 import com.example.fpt_midterm_pos.dto.RevenueShowDTO;
 import com.example.fpt_midterm_pos.mapper.InvoiceMapper;
-import com.example.fpt_midterm_pos.exception.BadRequestException;
-import com.example.fpt_midterm_pos.exception.DuplicateStatusException;
 import com.example.fpt_midterm_pos.data.repository.CustomerRepository;
 import com.example.fpt_midterm_pos.data.repository.InvoiceDetailRepository;
 import com.example.fpt_midterm_pos.data.repository.InvoiceRepository;
@@ -50,7 +38,6 @@ import com.example.fpt_midterm_pos.utils.DateUtils;
 
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.mockito.MockedStatic;
 import org.mockito.MockitoAnnotations;
 
@@ -257,16 +244,16 @@ public class InvoiceServiceImplTest {
 
             // Test cases for different periods
             RevenueShowDTO result = invoiceService.getInvoicesRevenue(date, "year");
-            assertEquals(1000.0, result.getAmount());
+            Assertions.assertEquals(1000.0, result.getAmount());
 
             result = invoiceService.getInvoicesRevenue(date, "month");
-            assertEquals(500.0, result.getAmount());
+            Assertions.assertEquals(500.0, result.getAmount());
 
             result = invoiceService.getInvoicesRevenue(date, "day");
-            assertEquals(100.0, result.getAmount());
+            Assertions.assertEquals(100.0, result.getAmount());
 
             // Test case for invalid period
-            assertThrows(IllegalArgumentException.class, () -> invoiceService.getInvoicesRevenue(date, "invalid"));
+            Assertions.assertThrows(IllegalArgumentException.class, () -> invoiceService.getInvoicesRevenue(date, "invalid"));
         }
     }
 }
