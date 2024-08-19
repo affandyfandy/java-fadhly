@@ -49,7 +49,7 @@ public class CustomGatewayFilter extends AbstractGatewayFilterFactory<CustomGate
     private Mono<Boolean> validateApiKey(ServerWebExchange exchange, String apiKey) {
         return webClientBuilder.build()
                 .get()
-                .uri("lb://auth-service/api/v2/authentication/validate?apiKey=" + apiKey)
+                .uri("http://localhost:8083/api/v2/authentication/validate?apiKey=" + apiKey)
                 .retrieve()
                 .bodyToMono(Boolean.class)
                 .onErrorReturn(false);

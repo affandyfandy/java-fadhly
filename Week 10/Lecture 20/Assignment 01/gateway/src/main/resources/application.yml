@@ -9,11 +9,11 @@ spring:
       routes:
         - id: post
           uri: http://localhost:8081/
-          Predicates:
+          predicates:
             - Path=/api/v2/posts/**
         - id: comment
           uri: http://localhost:8082/
-          Predicates:
+          predicates:
             - Path=/api/v2/comments/**
             
 eureka:

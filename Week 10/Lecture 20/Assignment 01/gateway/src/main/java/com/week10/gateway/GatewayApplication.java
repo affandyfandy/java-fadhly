@@ -26,10 +26,10 @@ public class GatewayApplication {
         return routeLocatorBuilder.routes()
                 .route("post", r -> r.path("/api/v2/posts/**")
                         .filters(f -> f.filter(customGatewayFilter.apply(new CustomGatewayFilter.Config())))
-                        .uri("lb://post-service"))
+                        .uri("http://localhost:8081"))
                 .route("comment", r -> r.path("/api/v2/comments/**")
                         .filters(f -> f.filter(customGatewayFilter.apply(new CustomGatewayFilter.Config())))
-                        .uri("lb://comment-service"))
+                        .uri("http://localhost:8082"))
                 .build();
     } 
 
