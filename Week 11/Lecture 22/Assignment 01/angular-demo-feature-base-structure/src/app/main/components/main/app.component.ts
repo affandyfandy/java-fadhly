@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProductComponent } from './pages/product/product.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-week-11-app';
+  title = 'angular-demo';
 }

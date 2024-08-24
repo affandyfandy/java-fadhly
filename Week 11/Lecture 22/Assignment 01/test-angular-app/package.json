@@ -1,5 +1,5 @@
 {
-  "name": "angular-week-11-app",
+  "name": "test-angular-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,10 +19,8 @@
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
     "ag-grid-angular": "^32.1.0",
-    "ag-grid-community": "^32.1.0",
-    "bootstrap": "^5.3.3",
-    "json-server": "^1.0.0-beta.2",
     "rxjs": "~7.8.0",
+    "test-angular-app": "file:",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },

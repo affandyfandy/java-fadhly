@@ -1,0 +1,9 @@
+{
+    "products": [
+        {"id": 1, "name": "Laptop", "price": 120.99, "status": "Active", "quantity": 10.0, "createdAt": "2024-08-24T12:00:00Z", "updatedAt": "2024-08-24T12:00:00Z"},
+        {"id": 2, "name": "Bag", "price": 25.99, "status": "Active", "quantity": 30.0, "createdAt": "2024-08-24T12:00:00Z", "updatedAt": "2024-08-24T12:00:00Z"},
+        {"id": 3, "name": "Chair", "price": 50.99, "status": "Deactive", "quantity": 8.0, "createdAt": "2024-08-24T12:00:00Z", "updatedAt": "2024-08-24T12:00:00Z"},
+        {"id": 4, "name": "Hat", "price": 10.99, "status": "Deactive", "quantity": 50.0, "createdAt": "2024-08-24T12:00:00Z", "updatedAt": "2024-08-24T12:00:00Z"},
+        {"id": 5, "name": "Dress", "price": 15.99, "status": "Active", "quantity": 16.0, "createdAt": "2024-08-24T12:00:00Z", "updatedAt": "2024-08-24T12:00:00Z"}
+    ]
+}
