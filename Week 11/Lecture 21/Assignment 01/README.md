@@ -169,13 +169,15 @@ The project will default in `http://localhost:4200`
 
 2. `Setting Mock DB`
 
-Create `db.json` in `<name-project>/`
+Create `db.json` in `<name-project>/db.json`
 
 ```
 npm install json-server
 
 npx json-server db.json
 ```
+
+![Setting Mock DB](img/Mock%20DB.png)
 
 Json server started in `http://localhost:3000/`
 
