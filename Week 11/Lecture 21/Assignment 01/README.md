@@ -206,3 +206,9 @@ ng generate component <component-name>
 ![Setting Component Login](img/Setting%20Login%20Component%202.png)
 
 ![Setting UI Login](img/Setting%20Login%20UI.png)
+
+![Output No Input](img/Output%20No%20Input.png)
+
+![Ouput Wrong Input](img/Output%20Wrong%20Input.png)
+
+![Output Success Login](img/Output%20Success%20Login.png)

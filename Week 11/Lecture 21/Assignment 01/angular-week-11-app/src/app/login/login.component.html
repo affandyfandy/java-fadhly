@@ -12,7 +12,7 @@
           <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password" required>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+        <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Sign in</button>
       </form>
 
       <div *ngIf="errorMessage" class="text-danger text-center mt-3">

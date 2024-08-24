@@ -31,7 +31,7 @@ export class LoginComponent {
 
     this.loginService.validateUserLogin(user).subscribe(
       isValid => {
-        if(this.loginService.validateUserLogin(user)) {
+        if(isValid) {
           this.errorMessage = null;
           alert('Login Successful!');
         } else {
