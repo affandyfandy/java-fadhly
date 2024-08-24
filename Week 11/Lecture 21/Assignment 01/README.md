@@ -47,21 +47,162 @@ Link for this project [Project Demo Angular](https://github.com/helenhash/angula
 ### Main Lifecycle in Angular
 
 1. `constructor` - Runs when Angular instantiates the component.
+
+```typescript
+constructor() {
+    console.log('Constructor called');
+}
+```
+
 2. `ngOnInit` - Run when initialized all the component's inputs.
+
+```typescript
+ngOnInit(): void {
+    console.log('ngOnInit called');
+}
+```
+
 3. `ngOnChanges` - Run when component's inputs have changed.
+
+```typescript
+ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges called', changes);
+}
+```
+
 4. `ngDoCheck` - Run when component is checked for changes.
+
+```typescript
+ngDoCheck(): void {
+    console.log('ngDoCheck called');
+}
+```
+
 5. `ngAfterContentInit` - Run when component's content has been initialized.
+
+```typescript
+ngAfterContentInit(): void {
+    console.log('ngAfterContentInit called');
+}
+```
+
 6. `ngAfterContentChecked` - Run when component content has been checked for changes.
+
+```typescript
+ngAfterContentChecked(): void {
+    console.log('ngAfterContentChecked called');
+}
+```
+
 7. `ngAfterViewInit` - Run when component's view has been initialized.
+
+```typescript
+ngAfterViewInit(): void {
+    console.log('ngAfterViewInit called');
+}
+```
+
 8. `ngAfterViewChecked` - Run when component's view has been checked for changes.
+
+```typescript
+ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked called');
+}
+```
+
 9. `afterNextRender` - Run once when all components have been rendered to the DOM.
-10. `afterRender` - Run every time when all components have been rendered to the DOM
+
+```typescript
+afterNextRender(): void {
+    console.log('afterNextRender custom logic called');
+}
+```
+
+10. `afterRender` - Run every time when all components have been rendered to the DOM.
+
+```typescript
+afterRender(): void {
+    console.log('afterRender custom logic called');
+}
+```
+
 11. `ngOnDestroy` - Run when before the component is destroyed.
+
+```typescript
+ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
+}
+```
+
 
 ## Task 05: Compare Between Standalone and No-Standalone App
 
-### No-Standalone App
+Main difference Angular that using Standalone and not using Standalone is from declare and using the module or the component or importing the library. In Standalone the should declare `standalone: true` in the `component.ts` to use the other component or module or the library, but in the no Standalone it used `ngModule` in the main app component toimportr component or module or the library also.
 
-### Standalone App
+### Standalone
+
+![App Componenet Standalone](img/Standalone%201.png)
+
+![Componenet Standalone](img/Standalone%202.png)
+
+### No-Standalone
+
+![App Component Module No Standalone](img/No%20Standalone%201.png)
+
+![App Routing No Standalone](img/No%20Standalone%203.png)
+
+![Component Module No Standalone](img/No%20Standalone%202.png)
 
 ## Task 06: Create New Component "Login" in Standalone App
+
+1. `Create Project Angular with Standalone`
+
+```
+ng new <name-project> --ssr=false
+
+cd <name-project>
+
+ng serve
+```
+
+The project will default in `http://localhost:4200`
+
+2. `Setting Mock DB`
+
+Create `db.json` in `<name-project>/`
+
+```
+npm install json-server
+
+npx json-server db.json
+```
+
+Json server started in `http://localhost:3000/`
+
+3. `Create Model User to Login`
+
+```
+ng generate class <models/class-name>
+```
+
+![Setting Model Login](img/Setting%20Model.png)
+
+4. `Create Service to Login`
+
+```
+ng generate service <services/service-name>
+```
+
+![Setting Service Login](img/Setting%20Service.png)
+
+5. `Create Login Component to Handle UI and Logic`
+
+```
+ng generate component <component-name>
+```
+
+![Setting Component Login](img/Setting%20Login%20Component%201.png)
+
+![Setting Component Login](img/Setting%20Login%20Component%202.png)
+
+![Setting UI Login](img/Setting%20Login%20UI.png)
