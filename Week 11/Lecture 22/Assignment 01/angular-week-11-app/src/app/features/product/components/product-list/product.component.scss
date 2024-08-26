@@ -1,0 +1,12 @@
+::ng-deep ag-grid-angular {
+    width: 100%;
+    height: 600px;
+}
+
+::ng-deep .ag-row.rag-red {
+    background-color: #cc222244;
+}
+
+::ng-deep .ag-row.rag-green {
+    background-color: #33cc3344;
+}

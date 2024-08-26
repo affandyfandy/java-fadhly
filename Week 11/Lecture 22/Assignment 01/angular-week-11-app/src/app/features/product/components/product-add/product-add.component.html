@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h2>Add New Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="mt-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div *ngIf="productForm.get('name')?.invalid && (productForm.get('name')?.dirty || productForm.get('name')?.touched)" class="text-danger">
+            Name is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+        <div *ngIf="productForm.get('price')?.invalid && (productForm.get('price')?.dirty || productForm.get('price')?.touched)" class="text-danger">
+            Price is required and must be non-negative.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" formControlName="quantity">
+        <div *ngIf="productForm.get('quantity')?.invalid && (productForm.get('quantity')?.dirty || productForm.get('quantity')?.touched)" class="text-danger">
+            Quantity is required and must be non-negative.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+  </div>
