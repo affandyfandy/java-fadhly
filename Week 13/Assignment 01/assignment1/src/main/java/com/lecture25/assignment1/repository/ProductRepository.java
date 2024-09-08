@@ -3,9 +3,9 @@ package com.lecture25.assignment1.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.lecture25.assignment1.entity.Customer;
+import com.lecture25.assignment1.entity.Product;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
 }
