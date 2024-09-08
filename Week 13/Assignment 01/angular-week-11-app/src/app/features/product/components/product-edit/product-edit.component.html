@@ -1,0 +1,79 @@
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" *ngIf="clickButton === true">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Product</h5>
+                <button type="button" class="btn-close" (click)="closeModal()"></button>
+            </div>
+
+            <div class="modal-body">
+                <form *ngIf="product">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" [(ngModel)]="product.quantity" name="quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status" [(ngModel)]="product.status" name="status">
+                            <option value="Active">Active</option>
+                            <option value="Deactive">Deactive</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
+                <button type="button" class="btn btn-success" (click)="saveChanges()">Save</button>
+            </div>
+        </div>
+
+        <div class="modal-content" *ngIf="clickButton === false">
+            <div class="modal-header">
+              <h5 class="modal-title">Product Detail</h5>
+              <button type="button" class="btn-close" (click)="closeModal()"></button>
+            </div>
+      
+            <div class="modal-body">
+                <form *ngIf="product">
+                    <div class="form-group">
+                        <label for="id">Id</label>
+                        <input type="text" class="form-control" id="id" [(ngModel)]="product.id" name="id" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" [(ngModel)]="product.quantity" name="quantity" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="createdAt">Created At</label>
+                        <input type="text" class="form-control" id="createdAt" [(ngModel)]="product.createdAt" name="createdAt" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="updatedAt">Updated At</label>
+                        <input type="text" class="form-control" id="updatedAt" [(ngModel)]="product.updatedAt" name="updatedAt" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <input type="text" class="form-control" id="status" [(ngModel)]="product.status" name="status" disabled>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

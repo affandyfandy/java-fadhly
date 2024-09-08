@@ -1,0 +1,21 @@
+<ag-grid-angular
+[rowData]="products"
+[columnDefs]="colDefs"
+[pagination]="true"
+[paginationPageSize]="paginationPageSize"
+[rowClassRules]="rowClassRules"
+[defaultColDef]="defaultColDef"
+[class]="themeClass"/>
+
+<app-product-delete
+    [product]="selectedProduct"
+    (close)="onModalClose()"
+    (delete)="onProductDelete($event)">
+</app-product-delete>
+
+<app-product-edit
+    [product]="selectedProduct"
+    [clickButton]="clickEditButton"
+    (close)="onModalClose()"
+    (save)="onProductSave($event)">
+</app-product-edit>

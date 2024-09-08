@@ -28,7 +28,15 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
-        return productRepository.save(product);
+        Product prod = new Product();
+        prod.setName(product.getName());
+        prod.setPrice(product.getPrice());
+        prod.setQuantity(product.getQuantity());
+        prod.setStatus("Active");
+        prod.setCreateAt(new Date());
+        prod.setUpdatedAt(new Date());
+
+        return productRepository.save(prod);
     }
 
     @Override
@@ -38,8 +46,8 @@ public class ProductServiceImpl implements ProductService {
             checkProd.setName(product.getName());
             checkProd.setPrice(product.getPrice());
             checkProd.setQuantity(product.getQuantity());
-            checkProd.setStatus("Active");
-            checkProd.setCreateAt(new Date());
+            checkProd.setStatus(product.getStatus());
+            checkProd.setCreateAt(checkProd.getCreateAt());
             checkProd.setUpdatedAt(new Date());
 
             return productRepository.save(checkProd);
