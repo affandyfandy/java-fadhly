@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "username": "test",
+      "password": "1234"
+    }
+  ],
   "products": [
     {
       "id": "1",
@@ -37,15 +49,6 @@
       "updatedAt": "2024-08-24T00:00:00.000Z"
     },
     {
-      "id": "6",
-      "name": "Shoes",
-      "price": 40.99,
-      "status": "Active",
-      "quantity": 8,
-      "createdAt": "2024-08-24T00:00:00.000Z",
-      "updatedAt": "2024-08-24T00:00:00.000Z"
-    },
-    {
       "id": "7",
       "name": "Phone",
       "price": 399.99,
@@ -78,15 +81,6 @@
       "price": 35.99,
       "status": "Deactive",
       "quantity": 50,
-      "createdAt": "2024-08-24T00:00:00.000Z",
-      "updatedAt": "2024-08-24T00:00:00.000Z"
-    },
-    {
-      "id": "11",
-      "name": "Mouse",
-      "price": 25.99,
-      "status": "Active",
-      "quantity": 70,
       "createdAt": "2024-08-24T00:00:00.000Z",
       "updatedAt": "2024-08-24T00:00:00.000Z"
     },

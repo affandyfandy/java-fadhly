@@ -124,6 +124,7 @@ export class ProductComponent implements OnInit {
   onProductDelete(product: Product) {
     this.productService.deleteProduct(product).subscribe({
       next: () => {
+        alert('Delete Product Successful!');
         this.loadProducts();
       },
       error: (error) => {
