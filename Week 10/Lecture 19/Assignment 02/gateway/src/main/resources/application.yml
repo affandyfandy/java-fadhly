@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: post
+          uri: http://localhost:8081/
+          Predicates:
+            - Path=/api/v2/posts/**
+        - id: comment
+          uri: http://localhost:8082/
+          Predicates:
+            - Path=/api/v2/comments/**
+
+custom-gateway-filter:
+  headers:
+    Content-Type: application/json
+  error-status: UNAUTHORIZED
