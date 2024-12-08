@@ -1,0 +1,139 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": 120.99,
+      "status": "Deactive",
+      "quantity": 10,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "name": "Bag",
+      "price": 20.99,
+      "status": "Active",
+      "quantity": 25,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "name": "Chair",
+      "price": 50.99,
+      "status": "Deactive",
+      "quantity": 5,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "name": "Table",
+      "price": 10.99,
+      "status": "Active",
+      "quantity": 30,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "name": "Tumblr",
+      "price": 15.99,
+      "status": "Deactive",
+      "quantity": 18,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "name": "Shoes",
+      "price": 40.99,
+      "status": "Active",
+      "quantity": 8,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "name": "Phone",
+      "price": 399.99,
+      "status": "Active",
+      "quantity": 15,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "name": "Headphones",
+      "price": 29.99,
+      "status": "Deactive",
+      "quantity": 40,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "name": "Monitor",
+      "price": 150.99,
+      "status": "Active",
+      "quantity": 20,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "10",
+      "name": "Keyboard",
+      "price": 35.99,
+      "status": "Deactive",
+      "quantity": 50,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "11",
+      "name": "Mouse",
+      "price": 25.99,
+      "status": "Active",
+      "quantity": 70,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "12",
+      "name": "Desk",
+      "price": 120.99,
+      "status": "Active",
+      "quantity": 22,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "13",
+      "name": "Book",
+      "price": 12.99,
+      "status": "Deactive",
+      "quantity": 90,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "14",
+      "name": "Pen",
+      "price": 5.99,
+      "status": "Active",
+      "quantity": 200,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "id": "15",
+      "name": "Notebook",
+      "price": 8.99,
+      "status": "Active",
+      "quantity": 120,
+      "createdAt": "2024-08-24T00:00:00.000Z",
+      "updatedAt": "2024-08-24T00:00:00.000Z"
+    }
+  ]
+}
